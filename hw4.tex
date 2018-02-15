@@ -1,7 +1,8 @@
 \documentclass[11pt]{article}
 \input{headers4}
 
-\usepackage{fancyhdr}   
+\usepackage{fancyhdr} 
+\usepackage{tikz}  
 \pagestyle{fancy}      
 \lhead{MA453 Spring 2018 - Homework 4}               
 \rhead{Harris Christiansen (christih@purdue.edu)}
@@ -21,53 +22,108 @@
 \begin{enumerate}
 
 %%% Problem 1: p77 F.1
-\item {\bfseries p77 F.1.} Question
+\item {\bfseries p77 F.1.} Let $G$ be the group of symmetries of the regular hexagon. List the elements of $G$ (there are 12 of them), then write the table of $G$.
+
+	\begin{tikzpicture}
+		\newdimen\R
+		\R=2.7cm
+		\draw (0:\R) \foreach \x in {60,120,...,360} {  -- (\x:\R) };
+		\foreach \x/\l/\p in
+		{ 30/{(f)}/above,
+		60/{(2,e)}/above,
+		90/{(d)}/above,
+		120/{(1,c)}/above,
+		150/{(b)}/left,
+		180/{(6,a)}/left,
+		210/{(None)}/left,
+		240/{(5)}/below,
+		270/{(None)}/below,
+		300/{(4)}/below,
+		330/{(None)}/right,
+		360/{(3)}/right
+		}
+		\node[inner sep=1pt,circle,draw,fill,label={\p:\l}] at (\x:\R) {};
+	\end{tikzpicture}
 
 	(No need to write the group table of $G$.)
   
 	{\bfseries Solution.}
+	
+	$R_0 = \begin{pmatrix}
+		1 \hspace{6mm} 2 \hspace{6mm} 3 \hspace{6mm} 4 \hspace{6mm} 5 \hspace{6mm} 6 \\
+		1 \hspace{6mm} 2 \hspace{6mm} 3 \hspace{6mm} 4 \hspace{6mm} 5 \hspace{6mm} 6
+	\end{pmatrix}$
+	$R_1 = \begin{pmatrix}
+		1 \hspace{6mm} 2 \hspace{6mm} 3 \hspace{6mm} 4 \hspace{6mm} 5 \hspace{6mm} 6 \\
+		2 \hspace{6mm} 3 \hspace{6mm} 4 \hspace{6mm} 5 \hspace{6mm} 6 \hspace{6mm} 1
+	\end{pmatrix}$
+	
+	$R_2 = \begin{pmatrix}
+		1 \hspace{6mm} 2 \hspace{6mm} 3 \hspace{6mm} 4 \hspace{6mm} 5 \hspace{6mm} 6 \\
+		3 \hspace{6mm} 4 \hspace{6mm} 5 \hspace{6mm} 6 \hspace{6mm} 1 \hspace{6mm} 2
+	\end{pmatrix}$
+	$R_3 = \begin{pmatrix}
+		1 \hspace{6mm} 2 \hspace{6mm} 3 \hspace{6mm} 4 \hspace{6mm} 5 \hspace{6mm} 6 \\
+		x \hspace{6mm} x \hspace{6mm} x \hspace{6mm} x \hspace{6mm} x \hspace{6mm} x
+	\end{pmatrix}$
+	
+	etc...
 
 %%% Problem 2: p78 H.1
-\item {\bfseries p78 H.1.} Question
+\item {\bfseries p78 H.1.} Let $A$ be a set of $a \in A$. Let $G$ be the subset of $S_A$ consisting of all the permutation $F$ of $A$ such that $F(a) = a$. Prove that $G$ is a subgroup of $S_A$.
   
 	{\bfseries Solution.}
   
 \newpage
 
 %%% Problem 3: p86 A.1 (a,b,c)
-\item {\bfseries p86 A.1 (a,b,c).} Question
+\item {\bfseries p86 A.1 (a,b,c).} Compute each of the following products in $S_9$. (Write your answer as a singular permutation.)
   
 	{\bfseries Solution.}
+	
+	\begin{enumerate}
+  
+		\item (145)(37)(682)
+		
+		\item (17)(628)(9354)
+		
+		\item (71825)(36)(49)
+  
+  \end{enumerate}
 
 %%% Problem 4: p86 A.2 (b,c,d)
-\item {\bfseries p86 A.2 (b,c,d).} Question
+\item {\bfseries p86 A.2 (b,c,d).} Write each of the following permutations in $S_9$ as a product of disjoint cycles:
   
 	{\bfseries Solution.}
+	
+	\begin{enumerate}
+	
+		\item Not Assigned
+	
+		\item 
+		$\begin{pmatrix}
+			1 \hspace{6mm} 2 \hspace{6mm} 3 \hspace{6mm} 4 \hspace{6mm} 5 \hspace{6mm} 6 \hspace{6mm} 7 \hspace{6mm} 8 \hspace{6mm} 9 \\
+			7 \hspace{6mm} 4 \hspace{6mm} 9 \hspace{6mm} 2 \hspace{6mm} 3 \hspace{6mm} 8 \hspace{6mm} 1 \hspace{6mm} 6 \hspace{6mm} 5
+		\end{pmatrix}$
+		
+		\item 
+		$\begin{pmatrix}
+			1 \hspace{6mm} 2 \hspace{6mm} 3 \hspace{6mm} 4 \hspace{6mm} 5 \hspace{6mm} 6 \hspace{6mm} 7 \hspace{6mm} 8 \hspace{6mm} 9 \\
+			7 \hspace{6mm} 9 \hspace{6mm} 5 \hspace{6mm} 3 \hspace{6mm} 1 \hspace{6mm} 2 \hspace{6mm} 4 \hspace{6mm} 8 \hspace{6mm} 6
+		\end{pmatrix}$
+		
+		\item 
+		$\begin{pmatrix}
+			1 \hspace{6mm} 2 \hspace{6mm} 3 \hspace{6mm} 4 \hspace{6mm} 5 \hspace{6mm} 6 \hspace{6mm} 7 \hspace{6mm} 8 \hspace{6mm} 9 \\
+			9 \hspace{6mm} 8 \hspace{6mm} 7 \hspace{6mm} 4 \hspace{6mm} 3 \hspace{6mm} 6 \hspace{6mm} 5 \hspace{6mm} 1 \hspace{6mm} 2
+		\end{pmatrix}$
+  
+  \end{enumerate}
 
 %%% Problem 5: p86 A.4 (d)
-\item {\bfseries p86 A.4 (d).} Question
-  
-	{\bfseries Solution.}
-  
-\newpage
+\item {\bfseries p86 A.4 (d).} If $\alpha = (3714), \beta = (123), and \gamma = (24135)$ in $S_7$, express each of the following as a product of disjoint cycles:
 
-%%% Problem 6: p
-\item {\bfseries p.} Question
-  
-	{\bfseries Solution.}
-
-%%% Problem 7: p
-\item {\bfseries p.} Question
-  
-	{\bfseries Solution.}
-
-%%% Problem 8: p
-\item {\bfseries p.} Question
-  
-	{\bfseries Solution.}
-
-%%% Problem 9: p
-\item {\bfseries p.} Question
+	(d) $\beta^2\alpha\gamma$
   
 	{\bfseries Solution.}
   
