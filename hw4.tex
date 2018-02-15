@@ -16,20 +16,21 @@
 \date{p77 F.1, p78 H.1, p86 A.1 (a,b,c), A.2 (b,c,d), and A.4 (d)}
 \maketitle
 
-\thispagestyle{fancy}  
-\pagestyle{fancy}      
+\thispagestyle{fancy}
+\pagestyle{fancy}
 
 \begin{enumerate}
 
 %%% Problem 1: p77 F.1
-\item {\bfseries p77 F.1.} Let $G$ be the group of symmetries of the regular hexagon. List the elements of $G$ (there are 12 of them), then write the table of $G$.
-
+\item {\bfseries p77 F.1.} Let $G$ be the group of symmetries of the regular hexagon. List the elements of $G$ (there are 12 of them).
+	\begin{center}
 	\begin{tikzpicture}
 		\newdimen\R
-		\R=2.7cm
+		\R=2.5cm
 		\draw (0:\R) \foreach \x in {60,120,...,360} {  -- (\x:\R) };
 		\foreach \x/\l/\p in
-		{ 30/{(f)}/above,
+		{
+		30/{(f)}/above,
 		60/{(2,e)}/above,
 		90/{(d)}/above,
 		120/{(1,c)}/above,
@@ -44,6 +45,7 @@
 		}
 		\node[inner sep=1pt,circle,draw,fill,label={\p:\l}] at (\x:\R) {};
 	\end{tikzpicture}
+	\end{center}
 
 	(No need to write the group table of $G$.)
   
@@ -105,6 +107,14 @@
 \item {\bfseries p78 H.1.} Let $A$ be a set of $a \in A$. Let $G$ be the subset of $S_A$ consisting of all the permutation $F$ of $A$ such that $F(a) = a$. Prove that $G$ is a subgroup of $S_A$.
   
 	{\bfseries Solution.}
+	
+	\begin{proof}
+	To prove $G$ is a subgroup of $S_A$, we must show: \\
+	if $f \in S$ then $f^{-1} \in S$ \\
+	if $f,g \in S$ then $fg \in S$ \\
+	
+	
+	\end{proof}
   
 \newpage
 
@@ -115,11 +125,23 @@
 	
 	\begin{enumerate}
   
-		\item (145)(37)(682)
+		\item (145)(37)(682) =
+		$\begin{pmatrix}
+			1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+			4 & 6 & 7 & 5 & 1 & 8 & 3 & 2 & 9
+		\end{pmatrix}$
 		
-		\item (17)(628)(9354)
+		\item (17)(628)(9354) =
+		$\begin{pmatrix}
+			1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+			7 & 8 & 5 & 9 & 4 & 2 & 1 & 6 & 3
+		\end{pmatrix}$
 		
-		\item (71825)(36)(49)
+		\item (71825)(36)(49) =
+		$\begin{pmatrix}
+			1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+			8 & 5 & 6 & 9 & 7 & 3 & 1 & 2 & 4
+		\end{pmatrix}$
   
   \end{enumerate}
 
@@ -137,18 +159,21 @@
 			1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
 			7 & 4 & 9 & 2 & 3 & 8 & 1 & 6 & 5
 		\end{pmatrix}$
+		= (17)(24)(395)(68)
 		
 		\item 
 		$\begin{pmatrix}
 			1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
 			7 & 9 & 5 & 3 & 1 & 2 & 4 & 8 & 6
 		\end{pmatrix}$
+		= (17435)(296)
 		
 		\item 
 		$\begin{pmatrix}
 			1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
 			9 & 8 & 7 & 4 & 3 & 6 & 5 & 1 & 2
 		\end{pmatrix}$
+		= (1928)(375)
   
   \end{enumerate}
 
@@ -158,7 +183,14 @@
 	(d) $\beta^2\alpha\gamma$
   
 	{\bfseries Solution.}
-  
+  	
+  	\begin{align*}
+		$\beta^2\alpha\gamma$ &= (123)(123)(3714)(24135) \\
+		&= (132)(3714)(24135) \\
+		&= (17)(243)(24135) \\
+		&= (173452)
+	\end{align*}
+	
 \newpage
 
 \end{enumerate}
