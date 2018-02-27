@@ -109,10 +109,17 @@
 	{\bfseries Solution.}
 	
 	\begin{proof}
-	To prove $G$ is a subgroup of $S_A$, we must show: \\
-	if $f \in S$ then $f^{-1} \in S$ \\
-	if $f,g \in S$ then $fg \in S$ \\
+	To prove $G$ is a subgroup of $S_A$, we must show:
 	
+	\begin{itemize}
+	\item if $f \in S$ then $f^{-1} \in S$ \\
+	Because $F(a)$ is the identity permutation, it follows that $F^{-1}F(a) = F(a) = a$. Thus, it is closed under inverses.
+	
+	\item if $f,g \in S$ then $fg \in S$ \\
+	Because $F(a) = a \forall a \in S_A$, then $\forall f,g \in G \rightarrow fg(a) = f(g(a)) = f(a) = a$. Thus, it is closed under multiplication.
+	\end{itemize}
+	
+	Thus, $G$ is a subgroup of $S_A$.
 	
 	\end{proof}
   
@@ -185,10 +192,10 @@
 	{\bfseries Solution.}
   	
   	\begin{align*}
-		$\beta^2\alpha\gamma$ &= (123)(123)(3714)(24135) \\
+		\beta^2 \alpha \gamma &= (123)(123)(3714)(24135) \\
 		&= (132)(3714)(24135) \\
 		&= (17)(243)(24135) \\
-		&= (173452)
+		&= (173452) \\
 	\end{align*}
 	
 \newpage
